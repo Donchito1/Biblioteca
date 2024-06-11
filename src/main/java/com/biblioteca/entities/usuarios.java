@@ -1,35 +1,23 @@
 package com.biblioteca.entities;
 
-import org.springframework.data.annotation.Id;
-
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Data
 @Entity
 public class usuarios {
 	
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Id
+	@jakarta.persistence.Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id; 
 	
-	@Getter
-	@Setter
 	@Nullable
 	private String username;
-	
-	@Getter
-	@Setter
+
 	@Nullable
 	private String password;
 	
-	@Getter
-	@Setter
 	@Nullable
 	private String email;
 

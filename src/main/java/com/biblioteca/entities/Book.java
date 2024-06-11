@@ -10,16 +10,14 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Data
 @Entity
 public class Book {
 
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Id
+	@jakarta.persistence.Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Getter
-	@Setter
+
 	@Nullable
 	private String title;
 
@@ -47,13 +45,9 @@ public class Book {
 		this.isbn = isbn;
 	}
 
-	@Getter
-	@Setter
 	@Nullable
 	private String author;
 	
-	@Getter
-	@Setter
 	@Nullable
 	private String isbn;
 }
